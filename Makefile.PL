@@ -17,6 +17,9 @@ feature 'ElasticSearch store', -default => 1,
 feature 'Solr store', -default => 1,
   'Catmandu::Store::Solr', '0.0201',
 ;
+feature 'DBI store', -default => 0,
+  'Catmandu::Store::DBI', '0.02'
+;
 feature 'FedoraCommons store', -default => 1,
   'Catmandu::FedoraCommons', '0.24',
 ;
@@ -27,6 +30,13 @@ feature 'bibliographic importers', -default => 1,
   'Catmandu::PubMed', '0.01',
   'Catmandu::ArXiv', '0.01',
   'Catmandu::PLoS', '0.01',
+;
+feature 'exporters', -default => 0,
+  'Catmandu::Exporter::XLS', '0.02',
+  'Catmandu::Exporter::ODS', '0.01',
+;
+feature 'Atom importer', -default => 0,
+  'Catmandu::Atom', '0.02',
 ;
 feature 'OAI importer', -default => 1,
   'Catmandu::OAI', '0.02',
