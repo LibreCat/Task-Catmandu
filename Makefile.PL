@@ -8,8 +8,12 @@ license 'perl';
 feature 'repl (interactive environment)', -default => 1,
   'Catmandu::Cmd::repl', '0.01',
 ;
+# stores
 feature 'MongoDB store', -default => 1,
   'Catmandu::Store::MongoDB', '0.0301',
+;
+feature 'CouchDB store', -default => 1,
+  'Catmandu::Store::CouchDB', '0.01'
 ;
 feature 'ElasticSearch store', -default => 1,
   'Catmandu::Store::ElasticSearch', '0.0202',
@@ -23,6 +27,7 @@ feature 'DBI store', -default => 0,
 feature 'FedoraCommons store', -default => 1,
   'Catmandu::FedoraCommons', '0.24',
 ;
+# importers
 feature 'MARC importer and MARC fixes', -default => 1,
   'Catmandu::MARC', '0.0304',
 ;
@@ -30,12 +35,9 @@ feature 'bibliographic importers', -default => 1,
   'Catmandu::PubMed', '0.01',
   'Catmandu::ArXiv', '0.01',
   'Catmandu::PLoS', '0.01',
+  'Catmandu::Inspire', '0.01',
 ;
-feature 'exporters', -default => 0,
-  'Catmandu::Exporter::XLS', '0.02',
-  'Catmandu::Exporter::ODS', '0.01',
-;
-feature 'Atom importer', -default => 0,
+feature 'Atom modules, importer and exporter', -default => 0,
   'Catmandu::Atom', '0.02',
 ;
 feature 'OAI importer', -default => 1,
@@ -53,6 +55,14 @@ feature 'Twitter importer', -default => 0,
 feature 'LDAP importer', -default => 0,
   'Catmandu::LDAP', '0.0103',
 ;
+# exporters
+feature 'BibTeX exporter' -default => 1,
+  'Catmandu::BibTeX', '0.02',
+; 
+feature 'XLS exporter', -default => 0,
+  'Catmandu::XLS', '0.02',
+;
+# dancer integration
 feature 'Dancer integration', -default => 0,
   'Dancer::Session::Catmandu', '0.02',
   'Dancer::Plugin::Catmandu::OAI', '0.0302',
