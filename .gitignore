@@ -4,6 +4,7 @@
 blib
 LICENSE
 Makefile
+Makefile.old
 MANIFEST*
 META.*
 MYMETA.*

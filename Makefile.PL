@@ -21,14 +21,14 @@ feature 'ElasticSearch store', -default => 1,
 feature 'Solr store', -default => 1,
   'Catmandu::Store::Solr', '0.0201',
 ;
-feature 'DBI store', -default => 0,
+feature 'DBI store', -default => 1,
   'Catmandu::Store::DBI', '0.02'
 ;
 feature 'FedoraCommons store', -default => 1,
   'Catmandu::FedoraCommons', '0.24',
 ;
 # importers
-feature 'MARC importer and MARC fixes', -default => 1,
+feature 'MARC importer, exporter and fixes', -default => 1,
   'Catmandu::MARC', '0.0304',
 ;
 feature 'bibliographic importers', -default => 1,
@@ -37,7 +37,7 @@ feature 'bibliographic importers', -default => 1,
   'Catmandu::PLoS', '0.01',
   'Catmandu::Inspire', '0.01',
 ;
-feature 'Atom modules, importer and exporter', -default => 0,
+feature 'Atom importer and exporter', -default => 1,
   'Catmandu::Atom', '0.02',
 ;
 feature 'OAI importer', -default => 1,
@@ -46,20 +46,20 @@ feature 'OAI importer', -default => 1,
 feature 'SRU importer', -default => 1,
   'Catmandu::SRU', '0.0101',
 ;
-feature 'Z39.50 importer', -default => 0,
+feature 'Z39.50 importer', -default => 1,
   'Catmandu::Z3950', '0.03',
 ;
-feature 'Twitter importer', -default => 0,
+feature 'Twitter importer', -default => 1,
   'Catmandu::Importer::Twitter', '0.02',
 ;
-feature 'LDAP importer', -default => 0,
+feature 'LDAP importer', -default => 1,
   'Catmandu::LDAP', '0.0103',
 ;
 # exporters
 feature 'BibTeX exporter' -default => 1,
   'Catmandu::BibTeX', '0.02',
 ; 
-feature 'XLS exporter', -default => 0,
+feature 'XLS exporter', -default => 1,
   'Catmandu::XLS', '0.02',
 ;
 # dancer integration
